@@ -1,0 +1,1 @@
+projeto de jogo da forca feito em nextJs, typeScript e TailwindCss
