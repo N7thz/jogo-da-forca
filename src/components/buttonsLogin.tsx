@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation"
 
-export const Buttons = () => {
+export const ButtonsLogin = () => {
 
     const router = useRouter()
 

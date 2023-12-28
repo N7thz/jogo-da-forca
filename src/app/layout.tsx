@@ -23,7 +23,7 @@ export default function RootLayout({
       lang="pt-br"
       className={oswald.variable}
     >
-      <body>{children}</body>
+      <body className='min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500'>{children}</body>
     </html>
   )
 }
