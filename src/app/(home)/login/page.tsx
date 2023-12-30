@@ -1,11 +1,16 @@
+'use client'
+
+import { useBackground } from "@/context/backgroundContext"
 import { ButtonsLogin } from "../../../components/buttonsLogin"
 
 export default function Login() {
 
+    const { background } = useBackground()
+
     return (
 
         <div
-            className="flex items-center justify-center min-h-screen"
+            className={`flex items-center justify-center min-h-screen ', ${background}`}
         >
             <div
                 className="flex flex-col items-center justify-around bg-zinc-200 min-h-[400px] w-3/12 rounded-lg"

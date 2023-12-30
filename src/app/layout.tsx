@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Oswald } from 'next/font/google'
 import './globals.css'
+import { BackgroundProvider } from '@/context/backgroundContext'
 
 const oswald = Oswald({
 
@@ -23,7 +24,11 @@ export default function RootLayout({
       lang="pt-br"
       className={oswald.variable}
     >
-      <body className='min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500'>{children}</body>
+      <body className='min-h-screen'>
+        <BackgroundProvider>
+          {children}
+        </BackgroundProvider>
+      </body>
     </html>
   )
 }

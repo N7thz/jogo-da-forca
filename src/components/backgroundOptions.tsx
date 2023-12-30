@@ -1,4 +1,8 @@
+import { useBackground } from "@/context/backgroundContext"
+
 export const BackgroundOptions = () => {
+
+    const { setBackground } = useBackground()
 
     const colors: string[] = [
 
@@ -15,7 +19,13 @@ export const BackgroundOptions = () => {
         <div className="flex gap-2 p-3 items-center">
 
             {
-                colors.map(color => <div className={`${color} w-16 h-16 rounded-full hover:scale-110 duration-300 cursor-pointer`} />)
+                colors.map(color =>
+
+                    <div
+                        onClick={() => setBackground(color)}
+                        className={`${color} w-16 h-16 rounded-full hover:scale-110 duration-300 cursor-pointer`}
+                    />
+                )
             }
         </div>
     )

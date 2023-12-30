@@ -4,15 +4,18 @@ import { useState } from "react";
 import { BackgroundOptions } from "@/components/backgroundOptions";
 import { ButtonsOptions } from "@/components/buttonsOptions";
 import { X } from 'lucide-react'
+import { useBackground } from "@/context/backgroundContext";
 
 export default function Opcoes() {
 
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
 
+    const { background } = useBackground()
+
     return (
 
         <div
-            className="flex items-center justify-center min-h-screen relative"
+            className={`flex items-center justify-center min-h-screen relative', ${background}`}
         >
             <div
                 className="flex flex-col items-center justify-around bg-zinc-200 min-h-[400px] w-3/12 rounded-lg"
@@ -32,9 +35,10 @@ export default function Opcoes() {
                     <BackgroundOptions />
                     <X
                         onClick={() => setIsModalOpen(false)}
+                        color="white"
                         width={36}
                         height={36}
-                        className='absolute -top-1 -right-1 z-1'
+                        className={`${background} absolute top-1 right-1 z-1 rounded-md p-1 cursor-pointer`}
                     />
                 </div>
             }

@@ -1,14 +1,16 @@
 'use client'
 
+import { useBackground } from "@/context/backgroundContext"
 import { useRouter } from "next/navigation"
 
 export const ButtonsLogin = () => {
 
     const router = useRouter()
-
+    const { background } = useBackground()
+    
     const handleJogar = () => {
 
-        alert('Jogar')
+        router.push('/forca')
     }
 
     const handleOpcoes = () => {
@@ -21,14 +23,14 @@ export const ButtonsLogin = () => {
         <div className="flex flex-col gap-4">
             <button
                 onClick={handleJogar}
-                className="button"
+                className={`button ${background}`}
             >
                 Jogar
             </button>
 
             <button
                 onClick={handleOpcoes}
-                className="button"
+                className={`button ${background}`}
             >
                 Opções
             </button>
