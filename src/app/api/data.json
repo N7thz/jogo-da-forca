@@ -1,0 +1,252 @@
+[
+    {
+        "id": 1,
+        "palavra": "ABACAXI",
+        "dica": "Uma fruta tropical"
+    },
+    {
+        "id": 2,
+        "palavra": "CADERNO",
+        "dica": "Usado para escrever e fazer anotações"
+    },
+    {
+        "id": 3,
+        "palavra": "FLORESTA",
+        "dica": "Um ecossistema com muitas árvores"
+    },
+    {
+        "id": 4,
+        "palavra": "TELEVISÃO",
+        "dica": "Um dispositivo para assistir programas e filmes"
+    },
+    {
+        "id": 5,
+        "palavra": "PIANO",
+        "dica": "Um instrumento musical de teclas"
+    },
+    {
+        "id": 6,
+        "palavra": "CACHOEIRA",
+        "dica": "Água caindo de uma altura"
+    },
+    {
+        "id": 7,
+        "palavra": "ELEFANTE",
+        "dica": "Um grande mamífero com tromba"
+    },
+    {
+        "id": 8,
+        "palavra": "REVISTA",
+        "dica": "Publicação impressa com artigos e imagens"
+    },
+    {
+        "id": 9,
+        "palavra": "ARCO-ÍRIS",
+        "dica": "Formado pelas cores do espectro de luz"
+    },
+    {
+        "id": 10,
+        "palavra": "ASTRONOMIA",
+        "dica": "Estudo dos corpos celestes"
+    },
+    {
+        "id": 11,
+        "palavra": "AVIÃO",
+        "dica": "Meio de transporte que voa"
+    },
+    {
+        "id": 12,
+        "palavra": "CHOCOLATE",
+        "dica": "Doce feito a partir de cacau"
+    },
+    {
+        "id": 13,
+        "palavra": "DINOSSAURO",
+        "dica": "Réptil pré-histórico extinto"
+    },
+    {
+        "id": 14,
+        "palavra": "ECLIPSE",
+        "dica": "Quando um corpo celeste é temporariamente obscurecido"
+    },
+    {
+        "id": 15,
+        "palavra": "FOTOGRAFIA",
+        "dica": "Registro visual capturado por uma câmera"
+    },
+    {
+        "id": 16,
+        "palavra": "GIRASSOL",
+        "dica": "Flor que segue a luz do sol"
+    },
+    {
+        "id": 17,
+        "palavra": "HIPÓTESE",
+        "dica": "Suposição ou conjectura"
+    },
+    {
+        "id": 18,
+        "palavra": "IGREJA",
+        "dica": "Local de culto religioso"
+    },
+    {
+        "id": 19,
+        "palavra": "JARDIM",
+        "dica": "Área cultivada com plantas e flores"
+    },
+    {
+        "id": 20,
+        "palavra": "KIWI",
+        "dica": "Fruta pequena e peluda"
+    },
+    {
+        "id": 21,
+        "palavra": "LIVRO",
+        "dica": "Conjunto de páginas com texto"
+    },
+    {
+        "id": 22,
+        "palavra": "MONTANHA",
+        "dica": "Elevação natural da terra"
+    },
+    {
+        "id": 23,
+        "palavra": "NÚVEM",
+        "dica": "Massa de partículas de água no ar"
+    },
+    {
+        "id": 24,
+        "palavra": "OCUPAÇÃO",
+        "dica": "Trabalho ou atividade profissional"
+    },
+    {
+        "id": 25,
+        "palavra": "PAISAGEM",
+        "dica": "Vista panorâmica da natureza"
+    },
+    {
+        "id": 26,
+        "palavra": "QUADRADO",
+        "dica": "Figura geométrica com quatro lados iguais"
+    },
+    {
+        "id": 27,
+        "palavra": "RESPIRAÇÃO",
+        "dica": "Ato de inspirar e expirar ar"
+    },
+    {
+        "id": 28,
+        "palavra": "SOL",
+        "dica": "Estrela central do sistema solar"
+    },
+    {
+        "id": 29,
+        "palavra": "TECNOLOGIA",
+        "dica": "Uso de conhecimento científico para criar ferramentas"
+    },
+    {
+        "id": 30,
+        "palavra": "URSO",
+        "dica": "Animal mamífero com pelagem espessa"
+    },
+    {
+        "id": 31,
+        "palavra": "VIAGEM",
+        "dica": "Jornada de um lugar para outro"
+    },
+    {
+        "id": 32,
+        "palavra": "XÍCARA",
+        "dica": "Recipientes para bebidas quentes"
+    },
+    {
+        "id": 33,
+        "palavra": "ZEBRA",
+        "dica": "Animal listrado preto e branco"
+    },
+    {
+        "id": 34,
+        "palavra": "ÁRVORE",
+        "dica": "Planta com tronco e folhas"
+    },
+    {
+        "id": 35,
+        "palavra": "BOLA",
+        "dica": "Objeto redondo usado em jogos"
+    },
+    {
+        "id": 36,
+        "palavra": "CÉU",
+        "dica": "Espaço acima da Terra"
+    },
+    {
+        "id": 37,
+        "palavra": "DESENHO",
+        "dica": "Representação gráfica ou artística"
+    },
+    {
+        "id": 38,
+        "palavra": "ESPETÁCULO",
+        "dica": "Exibição impressionante"
+    },
+    {
+        "id": 39,
+        "palavra": "FELICIDADE",
+        "dica": "Estado emocional positivo"
+    },
+    {
+        "id": 40,
+        "palavra": "GUITARRA",
+        "dica": "Instrumento musical de cordas"
+    },
+    {
+        "id": 41,
+        "palavra": "HARMONIA",
+        "dica": "Combinação agradável de elementos"
+    },
+    {
+        "id": 42,
+        "palavra": "IMAGINAÇÃO",
+        "dica": "Faculdade de criar imagens mentais"
+    },
+    {
+        "id": 43,
+        "palavra": "JOGO",
+        "dica": "Atividade recreativa com regras"
+    },
+    {
+        "id": 44,
+        "palavra": "LENÇO",
+        "dica": "Peça de tecido usado para limpeza ou adorno"
+    },
+    {
+        "id": 45,
+        "palavra": "MEMÓRIA",
+        "dica": "Faculdade de reter e lembrar informações"
+    },
+    {
+        "id": 46,
+        "palavra": "NADAR",
+        "dica": "Movimento no meio aquático"
+    },
+    {
+        "id": 47,
+        "palavra": "OCEANO",
+        "dica": "Grande extensão de água salgada"
+    },
+    {
+        "id": 48,
+        "palavra": "PINTURA",
+        "dica": "Arte de aplicar tinta em uma superfície"
+    },
+    {
+        "id": 49,
+        "palavra": "QUÍMICA",
+        "dica": "Ciência que estuda a composição da matéria"
+    },
+    {
+        "id": 50,
+        "palavra": "RISO",
+        "dica": "Expressão de alegria vocal"
+    }
+]

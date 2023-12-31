@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Oswald } from 'next/font/google'
 import './globals.css'
 import { BackgroundProvider } from '@/context/backgroundContext'
+import { ErrosProvider } from '@/context/errosContext'
 
 const oswald = Oswald({
 
@@ -26,7 +27,9 @@ export default function RootLayout({
     >
       <body className='min-h-screen'>
         <BackgroundProvider>
-          {children}
+          <ErrosProvider>
+            {children}
+          </ErrosProvider>
         </BackgroundProvider>
       </body>
     </html>

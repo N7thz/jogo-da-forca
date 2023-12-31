@@ -1,8 +1,10 @@
 'use client'
 
+import { useErros } from "@/context/errosContext"
+
 export const BonecoPalito = () => {
 
-    let erros: number = 6
+    const { erros } = useErros()
 
     return (
 

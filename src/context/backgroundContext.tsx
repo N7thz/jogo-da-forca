@@ -4,16 +4,19 @@ import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useStat
 
 interface BackgroundContextProps {
 
-    background: string
-    setBackground: Dispatch<SetStateAction<string>>
+    background: string | null
+    setBackground: Dispatch<SetStateAction<string | null>>
 }
 
-export const BackgroundContext = createContext({} as BackgroundContextProps)
+const BackgroundContext = createContext({} as BackgroundContextProps)
 
 export function BackgroundProvider({ children }: { children: ReactNode }) {
+    
+    localStorage.setItem('background', 'bg-gradient-to-r from-cyan-500 to-blue-500')
+    const backgroundStorage = localStorage.getItem('background')
 
-    const [background, setBackground] = useState<string>('bg-gradient-to-r from-cyan-500 to-blue-500')
-
+    const [background, setBackground] = useState<string | null>(backgroundStorage)
+    
     return (
 
         <BackgroundContext.Provider value={{ background, setBackground }}>

@@ -4,6 +4,12 @@ export const BackgroundOptions = () => {
 
     const { setBackground } = useBackground()
 
+    const trocarBackground = (color : string) => {
+
+        localStorage.setItem('background', color)
+        setBackground(color)
+    }
+
     const colors: string[] = [
 
         "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
@@ -22,7 +28,7 @@ export const BackgroundOptions = () => {
                 colors.map(color =>
 
                     <div
-                        onClick={() => setBackground(color)}
+                        onClick={() => trocarBackground(color)}
                         className={`${color} w-16 h-16 rounded-full hover:scale-110 duration-300 cursor-pointer`}
                     />
                 )
