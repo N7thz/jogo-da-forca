@@ -7,31 +7,30 @@ import { Lightbulb } from 'lucide-react'
 import { ConfigIcon } from "@/components/configIcon"
 import { useErros } from "@/context/errosContext"
 import { Modal } from "@/components/modal"
+import data from '@/app/api/data.json'
+import { log } from "console"
+
 
 export default function Forca() {
 
     const { background } = useBackground()
     const { erros, setErros } = useErros()
 
-    const palavra: string = "pastel"
-    const letras: string[] = palavra.split('')
+    const numeroAleatorio = Math.round(Math.random() * (50 - 1))
 
+    useEffect(() => {
+
+        const palavra = data[numeroAleatorio].palavra
+    },[])
+    
+    const palavra = 'abacaxi'
     const [newLetra, setNewLetra] = useState<string>('')
     const [historico, setHistorico] = useState<string[]>([])
     const [win, setWin] = useState<boolean>(false)
     const [lose, setLose] = useState<boolean>(false)
     const [letrasCertas, setLetrasCertas] = useState<string[]>([])
     const letrasUnicas = Array.from(new Set(palavra.split('')))
-
-    const palavraAleatoria = () => {
-        
-        
-    }
-
-    useEffect(() => {
-
-        palavraAleatoria()
-    },[])
+    const letras: string[] = palavra.split('')
 
     const verificarLetra = (e: FormEvent) => {
 
@@ -49,11 +48,11 @@ export default function Forca() {
                 setLetrasCertas(oldValue => [...oldValue, newLetra])
                 console.log(letrasCertas)
                 console.log(letrasUnicas)
-                
+
                 if (letrasUnicas.length - 1 === letrasCertas.length) {
 
                     setWin(true)
-                } 
+                }
             }
 
             if (!letras.includes(newLetra)) {
