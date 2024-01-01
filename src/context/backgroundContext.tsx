@@ -12,7 +12,7 @@ const BackgroundContext = createContext({} as BackgroundContextProps)
 
 export function BackgroundProvider({ children }: { children: ReactNode }) {
     
-    localStorage.setItem('background', 'bg-gradient-to-r from-cyan-500 to-blue-500')
+    localStorage.setItem('background', 'bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-purple-200 via-purple-400 to-purple-800')
     const backgroundStorage = localStorage.getItem('background')
 
     const [background, setBackground] = useState<string | null>(backgroundStorage)

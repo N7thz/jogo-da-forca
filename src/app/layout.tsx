@@ -3,6 +3,7 @@ import { Oswald } from 'next/font/google'
 import './globals.css'
 import { BackgroundProvider } from '@/context/backgroundContext'
 import { ErrosProvider } from '@/context/errosContext'
+import { PalavraProvider } from '@/context/palavraContext'
 
 const oswald = Oswald({
 
@@ -25,10 +26,12 @@ export default function RootLayout({
       lang="pt-br"
       className={oswald.variable}
     >
-      <body className='min-h-screen'>
+      <body className='min-h-screen bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-purple-200 via-purple-400 to-purple-800'>
         <BackgroundProvider>
           <ErrosProvider>
-            {children}
+            <PalavraProvider>
+              {children}
+            </PalavraProvider>
           </ErrosProvider>
         </BackgroundProvider>
       </body>

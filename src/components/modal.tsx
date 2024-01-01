@@ -15,12 +15,10 @@ export const Modal: React.FC<ModalProps> = ({ children }) => {
     return (
 
         <div className="absolute min-h-screen w-full bg-zinc-800/70 flex justify-center items-center z-10">
-            
+
             <div className="w-[300px] h-[300px] bg-zinc-200 flex flex-col justify-center items-center rounded-lg">
 
-                <h1 className="text-3xl">
-                    {children}
-                </h1>
+                {children}
 
                 <div className="flex flex-col gap-2">
 

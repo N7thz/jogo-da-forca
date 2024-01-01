@@ -1,42 +1,32 @@
 'use client'
 
-import { FormEvent, useEffect, useState } from "react"
+import { FormEvent, useState } from "react"
 import { BonecoPalito } from "@/components/bonecoPalito"
 import { useBackground } from "@/context/backgroundContext"
 import { Lightbulb } from 'lucide-react'
 import { ConfigIcon } from "@/components/configIcon"
 import { useErros } from "@/context/errosContext"
 import { Modal } from "@/components/modal"
-import data from '@/app/api/data.json'
-import { log } from "console"
-
+import { usePalavra } from "@/context/palavraContext"
 
 export default function Forca() {
 
     const { background } = useBackground()
     const { erros, setErros } = useErros()
+    const { palavra: { palavra, dica } } = usePalavra()
 
-    const numeroAleatorio = Math.round(Math.random() * (50 - 1))
-
-    useEffect(() => {
-
-        const palavra = data[numeroAleatorio].palavra
-    },[])
-    
-    const palavra = 'abacaxi'
     const [newLetra, setNewLetra] = useState<string>('')
     const [historico, setHistorico] = useState<string[]>([])
+    const [isDica, setIsDica] = useState<boolean>(false)
     const [win, setWin] = useState<boolean>(false)
     const [lose, setLose] = useState<boolean>(false)
     const [letrasCertas, setLetrasCertas] = useState<string[]>([])
-    const letrasUnicas = Array.from(new Set(palavra.split('')))
-    const letras: string[] = palavra.split('')
+    const letrasUnicas = Array.from(new Set(palavra.toLowerCase().split('')))
+    const letras: string[] = palavra.toLowerCase().split('')
 
     const verificarLetra = (e: FormEvent) => {
 
         e.preventDefault()
-
-        console.log(letrasUnicas)
 
         if (historico.includes(newLetra)) {
 
@@ -46,8 +36,6 @@ export default function Forca() {
             if (letrasUnicas.includes(newLetra)) {
 
                 setLetrasCertas(oldValue => [...oldValue, newLetra])
-                console.log(letrasCertas)
-                console.log(letrasUnicas)
 
                 if (letrasUnicas.length - 1 === letrasCertas.length) {
 
@@ -69,9 +57,6 @@ export default function Forca() {
         }
 
         setNewLetra('')
-
-        console.log(historico)
-        console.log(erros)
     }
 
     return (
@@ -102,7 +87,7 @@ export default function Forca() {
                                 return (
 
                                     <span
-                                        className="border-b-4 border-zinc-700 p-1 "
+                                        className="border-b-4 border-zinc-700 p-1"
                                     >
                                         {letra}
                                     </span>
@@ -125,14 +110,44 @@ export default function Forca() {
 
             <div className="flex flex-col items-center justify-between bg-zinc-200 min-h-[600px] w-1/3 rounded-lg relative">
 
-                <Lightbulb
-                    width={36}
-                    height={36}
-                    color="white"
-                    className={`${background} absolute top-2 right-2 p-1 rounded-full`}
-                />
+                {
+                    erros > 4 &&
+                    <Lightbulb
+                        onClick={() => setIsDica(true)}
+                        width={36}
+                        height={36}
+                        color="white"
+                        className={`${background} absolute top-2 right-2 p-1 rounded-full cursor-pointer hover:scale-110 duration-500`}
+                    />
+                }
 
-                <h1 className="text-3xl w-full text-left ml-8 text-white mt-4">Erros: {erros}</h1>
+                <h1 className="text-3xl w-full text-left ml-8 text-zinc-800 mt-4">Erros: {erros}</h1>
+
+                <div className={`w-11/12 p-1 rounded-lg ${background}`}>
+                    <h1 className="text-2xl text-left text-zinc-200 p-2">
+                        Dica:
+                    </h1>
+                    {
+                        isDica &&
+                        <h1 className="text-3xl italic text-zinc-200">{dica}</h1>
+                    }
+                </div>
+
+                <div className={`w-11/12 p-1 rounded-lg text-zinc-200 ${background}`}>
+                    <h1 className="text-2xl text-left p-2">
+                        Letras:
+                    </h1>
+                    <div className="flex p-2">
+                        {historico.map(letra =>
+                            <h1
+                                key={letra}
+                                className="text-4xl after:content-['-']"
+                            >
+                                {letra}
+                            </h1>
+                        )}
+                    </div>
+                </div>
 
                 <div className="min-h-full w-2/4 flex flex-col">
 
@@ -160,14 +175,15 @@ export default function Forca() {
             {
                 lose &&
                 <Modal>
-                    Voce perdeu
+                    <h1 className="text-3xl text-red-700">Voce perdeu.</h1>
+                    <span className="text-center">A palavra era "{palavra.toLowerCase()}"</span>
                 </Modal>
             }
 
             {
                 win &&
                 <Modal>
-                    Voce Venceu
+                    <h1 className="text-3xl text-green-700">Voce venceu.</h1>
                 </Modal>
             }
         </div>

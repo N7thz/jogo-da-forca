@@ -10,6 +10,7 @@ export const ConfigIcon = () => {
         <Cog
             width={36}
             height={36}
+            color='white'
             className={`absolute top-2 right-2 cursor-pointer`}
             onClick={() => router.push('/opcoes')}
         />
