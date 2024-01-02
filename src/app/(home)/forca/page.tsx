@@ -160,7 +160,7 @@ export default function Forca() {
                             value={newLetra}
                             maxLength={1}
                             required
-                            onChange={e => setNewLetra(e.target.value)}
+                            onChange={e => setNewLetra(e.target.value.toLowerCase())}
                         />
                         <button
                             className={`${background} button`}
