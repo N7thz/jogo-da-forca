@@ -4,7 +4,7 @@ export const BackgroundOptions = () => {
 
     const { setBackground } = useBackground()
 
-    const trocarBackground = (color : string) => {
+    const trocarBackground = (color: string) => {
 
         localStorage.setItem('background', color)
         setBackground(color)
@@ -28,6 +28,7 @@ export const BackgroundOptions = () => {
                 colors.map(color =>
 
                     <div
+                        key={color}
                         onClick={() => trocarBackground(color)}
                         className={`${color} w-16 h-16 rounded-full hover:scale-110 duration-300 cursor-pointer`}
                     />

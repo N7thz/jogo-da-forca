@@ -87,6 +87,7 @@ export default function Forca() {
                                 return (
 
                                     <span
+                                        key={letra}
                                         className="border-b-4 border-zinc-700 p-1"
                                     >
                                         {letra}
