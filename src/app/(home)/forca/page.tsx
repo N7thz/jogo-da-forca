@@ -142,6 +142,7 @@ export default function Forca() {
                     </h1>
                     <div className="flex p-2">
                         {historico.map(letra =>
+                        
                             <h1
                                 key={letra}
                                 className="text-4xl after:content-['-']"
